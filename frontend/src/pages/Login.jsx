@@ -24,7 +24,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await fetch(`${BASE_URL}/auth/login`, {
+      const res = await fetch(`${BASE_URL}/api/users/login`, {
         method: 'post',
         headers: {
           'Content-Type': 'application/json'
@@ -36,13 +36,14 @@ const Login = () => {
       if (!res.ok) {
         throw new Error(result.message);
       }
+      console.log(result);
 
       dispatch({
         type: 'LOGIN_SUCCESS',
         payload: {
           user: result.data,
           token: result.token,
-          role: result.role,
+          role: result.data.Role,
         },
       });
 

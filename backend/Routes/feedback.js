@@ -1,10 +1,8 @@
-import express from "express";
-import { authenticate, restrict } from "../auth/verifyToken.js";
-import { submitFeedback, getAllFeedback } from "../Controllers/feedbackController.js";
+const express = require('express');
+const router = express.Router();
+const feedbackController = require('../controllers/feedbackController');
 
-const feedbackRoutes = express.Router();
+router.post('/submit', feedbackController.submitFeedback);
+router.get('/all', feedbackController.getAllFeedbacks); // optional
 
-feedbackRoutes.post("/", submitFeedback);
-feedbackRoutes.get("/", authenticate, restrict(["admin"]), getAllFeedback);
-
-export default feedbackRoutes;
+module.exports = router;

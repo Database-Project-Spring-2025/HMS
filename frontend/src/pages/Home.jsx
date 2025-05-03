@@ -16,8 +16,10 @@ import { BsArrowRight } from 'react-icons/bs';
 import About from "../components/About/About";
 import ServiceList from '../components/Services/ServiceList';
 import DoctorList from "../components/Doctors/DoctorList";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <section className="hero_section pt-[60px] 2xl:h-[800px]">
@@ -32,7 +34,9 @@ const Home = () => {
                   Natus quaerat cumque fugit, perspiciatis cum nemo aperiam, aut
                   quia earum amet architecto, modi odio. Soluta unde ducimus
                   perferendis?</p>
-                <button className="btn">Request an Appointment</button>
+                  <button onClick={() => navigate('/appointments')} className="btn">
+  Request an Appointment
+</button>
               </div>
 
               <div className="mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]">
