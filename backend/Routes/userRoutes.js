@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const userController = require('../controllers/userController');
-const appointmentController = require("../controllers/appointmentController")
+const userController = require('../Controllers/userController');
+const appointmentController = require("../Controllers/appointmentController")
 const prescriptionController = require("../Controllers/prescriptionController")
 
 router.post('/register', userController.registerUser);

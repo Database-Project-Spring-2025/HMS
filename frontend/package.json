@@ -17,7 +17,8 @@
     "react-spinners": "^0.13.8",
     "react-toastify": "^10.0.5",
     "stripe": "^14.4.0",
-    "swiper": "^9.3.2"
+    "swiper": "^9.3.2",
+    "vite": "^5.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

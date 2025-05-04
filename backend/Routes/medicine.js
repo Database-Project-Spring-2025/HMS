@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const medicineController = require('../controllers/medicineController');
+const medicineController = require('../Controllers/medicineController');
 
 // POST /api/medicine/add-medicine
 router.post('/add-medicine', medicineController.addMedicine);

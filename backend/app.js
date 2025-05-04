@@ -2,11 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan'); // ✅ Import morgan
-const userRoutes = require('./routes/userRoutes');
-const doctorRoutes = require('./routes/doctorRoutes');
+const userRoutes = require('./Routes/userRoutes');
+const doctorRoutes = require('./Routes/doctorRoutes');
 const prescription = require("./Routes/prescriptions")
 const admin = require("./Routes/admin")
-const feedbackRoutes = require('./routes/feedback');
+const feedbackRoutes = require('./Routes/feedback');
 const medicineRoutes = require('./Routes/medicine')
 // const { errorHandler } = require('./middleware/errorHandler');
 
